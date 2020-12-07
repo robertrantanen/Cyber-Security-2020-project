@@ -50,6 +50,13 @@ def addView(request):
 		user.account.save()
 	
 	return redirect('/')
+
+@login_required
+def prizeView(request):
+	if request.user.account.coins >= 2000000:
+		return render(request, 'pages/prize.html')
+	else:
+		return redirect('/')
     
 
 class SignUpView(generic.CreateView):

@@ -4,6 +4,14 @@
         <title>FauxCoin</title>
     </head>
 
+    <style>
+        body {background-color: yellow;}
+        h1   {color:green;}
+        h2   {color:green;}
+        h3   {color:green;}
+        p    {color:green;}
+      </style>
+
     <body>
         <h1>Welcome to FauxCoin, {{user.username}}!</h1>
 
@@ -38,6 +46,11 @@
             <br>
  
             <input type="submit" value="Gift"/>
+        </form>
+
+        <h2>Do you have over 2000000 FauxCoins?</h2>
+        <form id='prize' action='prize/' method="GET"> 
+            <input type="submit" value="Redeem prize!"/>
         </form>
 
 
