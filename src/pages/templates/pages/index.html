@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Hello</title>
+        <title>FauxCoin</title>
     </head>
 
     <body>
-        <h1>Hello!</h1>
+        <h1>Welcome to FauxCoin, {{user.username}}!</h1>
 
-        <p>{{user.username}}</p>
+        <div><a href="/logout">Logout</a></div>
 
-        <p>{{user.account.coins}}</p>
+        <h2>You currently have {{user.account.coins}} FauxCoins!</h2>
+
+        <h2>Click the button to earn more FauxCoins!</h2>
 
         <form id='add' action='add/' method="POST"> 
             <input type="submit" value="Click!"/>
         </form>
+
+        <br>
+
+        <h2>Gift FauxCoins to other users:</h2>
+        <p>(Please don't enter a negative value)</p>
 
         <form id='gift' action='gift/' method="POST">
             <span>To:</span><br/>
@@ -22,14 +29,17 @@
                 <option value="{{account.user.username}}">{{account.user.username}}</option>
 			{% endfor %}
             </select><br/>
+
+            <br>
  
             <span>Amount:</span><br/>
             <input type="number" name="amount"/><br/>
+
+            <br>
  
             <input type="submit" value="Gift"/>
         </form>
 
-        <div><a href="/logout">Logout</a></div>
 
     </body>
 </html>
