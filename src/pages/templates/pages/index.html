@@ -49,9 +49,14 @@
         </form>
 
         <h2>Do you have over 2000000 FauxCoins?</h2>
-        <form id='prize' action='prize/' method="GET"> 
-            <input type="submit" value="Redeem prize!"/>
-        </form>
+        {% if user.account.coins >= 2000000 %}
+            <form id='prize' action='prize/' method="GET"> 
+                <input type="submit" value="Redeem prize!"/>
+            </form>
+        {% else %}
+            <p>You don't have enough FauxCoins :(</p>
+        {% endif %}
+
 
 
     </body>
