@@ -10,7 +10,7 @@ Run the app with:
 
 `python3 manage.py runserver`  
 
-Database commands and static files:
+Database commands and static files (not required for user):
 
 `python3 manage.py makemigrations`  
 `python3 manage.py migrate`  
